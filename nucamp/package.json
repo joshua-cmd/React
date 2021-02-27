@@ -1,11 +1,11 @@
 {
-  "name": "react",
+  "name": "Learn react",
   "version": "1.0.0",
   "description": "Building react work page",
   "main": "index.html",
   "scripts": {
     "lite": "lite-server",
-    "start": "npm run lite",
+    "start": "npm run watch:all",
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "node-sass -o css/ css/",
     "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
@@ -13,10 +13,6 @@
     "imagemin": "imagemin img/* -o dist/img",
     "usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html && usemin index.html -d dist --htmlmin -o dist/index.html",
     "clean": "rimraf dist",
-    "lite": "lite-server",
-    "scss": "node-sass -o css/ css/",
-    "start": "npm run watch:all",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "watch:scss": "onchange 'css/*.scss' -- npm run scss",
     "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'"
   },
@@ -32,6 +28,16 @@
     "bootstrap-social": "^5.1.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.5.1",
-    "popper.js": "^1.16.1"
-  }
+    "popper.js": "^1.16.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshua-cmd/React.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joshua-cmd/React/issues"
+  },
+  "homepage": "https://github.com/joshua-cmd/React#readme"
 }
