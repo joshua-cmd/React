@@ -10,7 +10,7 @@ const dragon2 = {
     }
    
 };
-const student ={
+const Student ={
     constructor(name,email,community){
         this.name = name;
         this.email = email;
