@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Card, CardImg, CardBody, CardTitle, CardText } from "reactstrap";
 
+
 class CampsiteInfoComponent extends Component {
   renderCampsite(campsite) {
     return (
@@ -19,7 +20,7 @@ class CampsiteInfoComponent extends Component {
   renderComments(comments) {
     console.log(comments);
     if (comments) {
-      // comments !== null
+      
       return (
         <div className="col-md-5 m-1">
           <h4>Comments</h4>
@@ -51,7 +52,7 @@ class CampsiteInfoComponent extends Component {
             <div className="container">
                 <div className="row">
                     {this.renderCampsite(this.props.campsite)}
-                    {this.renderComments(this.props.campsite.comments)}
+                    {this.renderComments(this.props.comments)}
                 </div>
             </div>
         );
