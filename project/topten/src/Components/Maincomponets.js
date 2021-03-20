@@ -1,8 +1,10 @@
 import { Component } from "react";
 import Navbar from "./NavbarComponet";
 import Open from "./Opening";
-import Footer from "./FooterComponets";
+// import Footer from "./FooterComponets";
 import List from  "./ListComponents";
+
+
 
 
 class Main extends Component{
@@ -14,12 +16,21 @@ class Main extends Component{
         };
     }
     render(){
+
         return(
-            <div className="container" >
+            <div className="container " >
+                <div className="d-flex align-items-center">
+                    <strong>Loading...</strong>
+                    <div className="spinner-border text-success ms-auto" role="status" aria-hidden="true"></div>
+                </div>
                 <Navbar/>
                 <Open />
-                {/* <List />
-                <Footer /> */}
+                <hr/>
+                <>
+                <List />
+                </>
+                {/* <Footer /> */}
+             
             </div>
 
         );

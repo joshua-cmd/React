@@ -1,5 +1,5 @@
 import { Component } from "react";
-import {Container, Row, Col ,Media, } from "reactstrap";
+import {Media, } from "reactstrap";
 
 class Open extends Component{
     constructor(props){
