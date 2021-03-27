@@ -2,12 +2,15 @@ import { Component } from "react";
 import {Container} from "reactstrap";
 import Cards from "./CardsComponets";
 import Tableofcontext from "./tableofcontentsComponents";
+
 class List extends Component{
     render(){
+     
         return(
             <Container>
-                <Tableofcontext />
-                <Cards />
+                {/* <Tableofcontext card={this.props.card} /> */}
+                <Cards cards={this.state.props} />
+                
             </Container>
         );
     }

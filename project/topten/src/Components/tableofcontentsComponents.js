@@ -1,18 +1,22 @@
 import { Component } from "react";
-import {List} from 'reactstrap';
+import {Row} from 'reactstrap';
 
 
 class Tableofcontext extends Component{
-
-        // this.props.card.map(card=> return(<li key={card.id}>{card.name}<li>);)
+    constructor(props){
+        super(props);
+    }
+ 
     render(){
+        const tableoc= this.props.card.map(card => <li ><a href="/">{this.props.card.name}</a></li>);
         return(
-            
-            <List type="unstyled">
-                <li/>
-                {/* pass in const */}
-            </List>
-            
+            <Row>
+                <>
+                    <ul>
+                        {tableoc}
+                    </ul>
+                </>
+            </Row>
         );
     }
 }

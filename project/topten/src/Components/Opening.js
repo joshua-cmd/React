@@ -1,19 +1,8 @@
 import { Component } from "react";
-import {Media, } from "reactstrap";
+import {Media} from "reactstrap";
 
 class Open extends Component{
-    constructor(props){
-        super(props);
-        this.state =[
-            {id: 0,
-                name: "Halo 3",
-                image: "/assets/images/react-lake.jpg",
-                release_date: "September 25, 2007",
-                Dev: "Bungie",
-                description: "Finial trilagoy ."},
-            {}
-        ]
-    }
+   
     render(){
         
         return(
@@ -25,16 +14,18 @@ class Open extends Component{
                <div className="row">
                    <div className="col">
                    <Media>
-                        <Media left href="#">
+                        <Media left scr="../Iteams/img/Open.jpg">
                             <Media 
                             object data-src="holder.js/64x64" 
                             alt="Generic placeholder image" />
                         </Media>
                         <Media body>
                             <Media heading>
-                            Media heading
+                            My rewiew of my Headphones!
                             </Media>
-                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            <p>Yes, the best earbuds on the market are convenient and their audio quality is (mostly) great too. But when it comes to serious listening, there are still many clear benefits to a chunkier pair of headphones that cover your whole ears and block out all external distractions. 
+                            </p>
+
                         </Media>
                      </Media>
                    </div>

@@ -1,10 +1,17 @@
-import { Component } from "react";
+import { Component, React } from "react";
 import {
     Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button
+    CardTitle, CardSubtitle, Button, CardHeader
   } from 'reactstrap';
+import Headphones from '../Items/Headphones.js';
 
 class Cards extends Component{
+    constructor(props){
+        super(props);
+        this.state={
+            card:Headphones
+        }
+    }
 
 
     render(){
@@ -24,48 +31,37 @@ class Cards extends Component{
     //     );
        
     // })
-    const arr =[<div className="row justify-content-md-center gy-5">
-    <div className="col">
-  <Card>
-      <CardImg top width="100%" src="/assets/318x180.svg" alt="Card image cap" />
-      <CardBody>
-          <CardTitle tag="h5">Card title</CardTitle>
-          <CardSubtitle tag="h6" className="mb-2 text-muted">Card subtitle</CardSubtitle>
-          <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-          <Button>Button</Button>
-      </CardBody>
-  </Card>
-  </div>
-  </div>, 3]
+    const arr = this.state.card.map(card =>
+    
+<div className="col" id={this.state.card.id}>
+    <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }} outline color="warning">
+        <CardHeader>
+        <CardTitle tag="h5">{this.props.card.Name}</CardTitle>
+            <CardSubtitle tag="h6" className="mb-2 text-muted">{this.props.card.brand}</CardSubtitle>
+            <CardSubtitle>{this.props.card.price}+ . + 99 </CardSubtitle>
+        </CardHeader>
+        <CardBody>
+            <CardImg top width="100%" src={this.props.card.im_src} alt="Card image " />
+            <CardText>{this.props.card.pros}</CardText>
+            <CardText>{this.props.card.cons}</CardText>
+            <a href={this.props.card.link}><Button>Button</Button></a>
+        </CardBody>
+    </Card>
+</div>
+ 
+  )
+
+
     return(
         <div className="container-fluid gy-5 overflow-hidden">
           <div className="row justify-content-md-center gy-5">
-              <div className="col">
-            <Card>
-                <CardImg top width="100%" src="/assets/318x180.svg" alt="Card image cap" />
-                <CardBody>
-                    <CardTitle tag="h5">Card title</CardTitle>
-                    <CardSubtitle tag="h6" className="mb-2 text-muted">Card subtitle</CardSubtitle>
-                    <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                    <Button>Button</Button>
-                </CardBody>
-            </Card>
-            </div>
-            </div>
-            <div className="row gy-6">
-                <div className="col">
-            <Card>
-                <CardImg top width="100%" src="/assets/318x180.svg" alt="Card image cap" />
-                <CardBody>
-                <CardTitle tag="h5">Card title</CardTitle>
-                <CardSubtitle tag="h6" className="mb-2 text-muted">Card subtitle</CardSubtitle>
-                <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                <Button>Button</Button>
-                </CardBody>
-            </Card>
-            </div>
-            </div>
             {arr}
+           
+          
+            
+            
+       
+       </div>
        </div>
     );
     
